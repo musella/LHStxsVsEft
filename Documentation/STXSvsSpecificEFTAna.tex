@@ -1,0 +1,114 @@
+\documentclass[11pt]{cernrep}
+%\documentclass[12pt,letterpaper,twoside]{article}
+%\documentclass[12pt,letterpaper]{article}
+%\usepackage[pdftex]{graphicx,color}
+\usepackage[pdftex]{graphicx,epsfig}
+%\usepackage[dvips]{graphicx,color}
+%\input{psfig}
+%\input{epsf}
+\usepackage{amsmath,amssymb}
+%\usepackage[twoside,pdftex,letterpaper,text={6.5in,9in}]{geometry}
+%\usepackage[twoside,dvips,letterpaper,text={6.5in,9in}]{geometry}
+\usepackage[dvips,letterpaper,text={6.5in,9in}]{geometry}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\renewcommand{\baselinestretch}{1.1}
+%\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%\numberwithin{equation}{section}
+
+%       Symbol definitions
+\newcommand\ltap{\
+  \raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}\ }
+\newcommand\gtap{\
+  \raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}\ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  \simge and \simle make "approx greater than" and "approx less than"
+\newcommand\simge{\mathrel{%
+   \rlap{\raise 0.511ex \hbox{$>$}}{\lower 0.511ex \hbox{$\sim$}}}}
+\newcommand\simle{\mathrel{
+   \rlap{\raise 0.511ex \hbox{$<$}}{\lower 0.511ex \hbox{$\sim$}}}}
+
+%  \slashcar puts a slash through a character to represent contraction
+%  with Dirac matrices. Use \not instead for negation of relations, and use
+%  \hbar for hbar.
+\newcommand{\slashchar}[1]%
+        {\kern .25em\raise.18ex\hbox{$/$}\kern-.75em #1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\lsim{\mathrel{\raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\gsim{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bs}{\boldsymbol}
+
+\newenvironment{changemargin}[2]{\begin{list}{}{
+        \setlength{\topsep}{0pt}\setlength{\leftmargin}{0pt}
+        \setlength{\rightmargin}{0pt}
+        \setlength{\listparindent}{\parindent}
+        \setlength{\itemindent}{\parindent}
+        \setlength{\parsep}{0pt plus 1pt}
+        \addtolength{\leftmargin}{#1}\addtolength{\rightmargin}{#2}
+        }\item }{\end{list}}
+%
+\begin{document}
+\title{
+%\vskip -15mm
+XXXXXXX}
+\author{Benjamin Fuks$^1$, Jorge~de~Blais$^2$,
+Kristin~Lohwasser$^3$, Pasquale Musella$^4$ and Ken~Mimasu$^5$}
+\institute{$^1$XXX\\
+$^2$XXX \\
+$^3$Department of Physics and Astronomy, Sheffield University, Sheffield, UK \\
+$^4$ } 
+\maketitle
+
+\begin{abstract}
+ 
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Introduction}
+\label{sec:intro}
+% All
+
+
+\section{Generated Models} 
+\label{sec:SSSS}
+%Ken
+%\input{geninput.tex}
+
+\section{Analysis}
+\label{sec:tools}
+%\input{ana.tex}
+%  
+
+
+\section{Statistical Hypothesis testing}
+\label{sec:test}
+
+%All!
+%\input{analysis.tex}
+
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+
+
+\section*{Acknowledgments}
+
+We thank the organizers and conveners of the Les Houches workshop, ``Physics
+at TeV Colliders'', for a stimulating meeting. This work has received funding from the European Union's Horizon 2020 research and innovation programme / ERC Grant Agreement n. 715871.
+
+
+%\vfil\eject
+
+
+\bibliography{STXSvsSpecificEFTAna}
+\bibliographystyle{utcaps}
+%\bibliographystyle{lesHouches}
+\end{document}
