@@ -53,12 +53,13 @@
 \title{
 %\vskip -15mm
 XXXXXXX}
-\author{Benjamin Fuks$^1$, Jorge~de~Blais$^2$,
-Kristin~Lohwasser$^3$, Pasquale Musella$^4$ and Ken~Mimasu$^5$}
-\institute{$^1$XXX\\
-$^2$XXX \\
-$^3$Department of Physics and Astronomy, Sheffield University, Sheffield, UK \\
-$^4$ } 
+\author{Jorge~de~Blas$^1$,
+Kristin~Lohwasser$^2$, Pasquale~Musella$^3$ and Ken~Mimasu$^4$}
+\institute{$^1$XXX \\
+$^2$Department of Physics and Astronomy, Sheffield University, Sheffield, UK \\
+$^3$XXX\\
+$^4$Centre for Cosmology, Particle Physics and Phenomenology (CP3), Universit\'e
+catholique de Louvain, Chemin du Cyclotron, 2, B-1348 Louvain-la-Neuve, Belgium } 
 \maketitle
 
 \begin{abstract}
@@ -74,16 +75,28 @@ $^4$ }
 \section{Introduction}
 \label{sec:intro}
 % All
+The Standard Model Effective Field Theory (SMEFT) is, by now, a well established framework for parametrising new physics effects in the interactions of Standard Model (SM) particles in a model independent way. It has been and continues to be a key part of the LHC programme, complementary to direct searches for new physics. The framework employs an operator expansion in canonical dimension suppressed by a generic cutoff scale, $\Lambda$, assumed to be much larger than the electroweak (EW) scale, situated by the vacuum expectation value of the Higgs field, $v$. The SM Lagrangian is thus supplemented by higher dimension operators and truncated at dimension-6, the lowest dimension at which $B$- and $L$-number conserving operators appear.
+\begin{align}
+    \mathcal{L}=\mathcal{L}_{SM}+\sum_i \frac{c_i}{\Lambda^2}\mathcal{O}^i+\cdots,
+\end{align} 
+Where the dimension-5 Weinberg operator for neutrino masses has been neglected. New physics effects are then expected to appear scaling between $\sim v^2/\Lambda^2$ and a heightened energy dependence of $\sim E^2/\Lambda^2$.
 
+One of the main strengths of the LHC in this respect is its ability to probe the high energy regime, in which it is expected that the sensitivity to EFT effects will be maximised to the large momentum flow through the modified  vertices accessing the stronger energy growth of the higher dimensional operators. Furthermore, the discovery of the Higgs boson in 2012 has opened a brand new avenue in constraining the SMEFT parameter space consisting of the various operators involving Higgs fields. Measurements of Higgs production and decay modes have already provided new constraints on many operators and have also helped to constrain some blind directions in existing fits to low-energy data such as precision electroweak measurements at LEP. 
+
+In the first run of the LHC, a very successful programme of signal strength measurements took place, in which information from many searches was combined into a global fit to overall coupling modifiers between the Higgs and the rest of the SM particles. The natural evolution of these measurements for Run 2 is to subdivide the phase space and work towards differential observables in Higgs production and decay. To this end, a staged approach termed Simplified Template Cross Sections (STXS) is being developed~\cite{deFlorian:2016spz}, consisting of an increasingly fine-grained binning of kinematic observables, separated by production and decay mode. The aim is to provide measurements in mutually exclusive regions of phase space, performed in simplified fiducial volumes and unfolded to remove detector and acceptance effects. Ideally, these will be designed to maximise sensitivity to new physics.
+
+Being one of the main elements of LHC searches for non-SM physics, it is of great interest to evaluate the sensitivity of the STXS measurements to SMEFT effects in Higgs boson interactions, particularly since they will be able to access these high energy tails of kinematic distributions. In particular, one would like to know how the information provided by a generic framework such as the STXS would compare to an optimised, dedicated search for SMEFT effects. Naively, one may expect some loss of information given, \emph{e.g.}, the finite binning of the distributions. In this study, we aim to quantify this difference by comparing and contrasting the ability to constrain SMEFT effects in Higgs production between the STXS measurements and an optimised analysis making use of multivariate methods to extract the maximum classification power of the SMEFT signals. We consider the concrete scenario of the (ZH) production of a Higgs boson decaying into a pair of $b$-quarks in association with a $Z$-boson  decaying to a pair of leptons, in the presence of a single EFT operator. We simulate several benchmark values for the operator Wilson coefficient within existing constraints from global fits along with the dominant reducible SM background and evaluate the statistical discriminating power of a hypothesis test using the STXS measurements versus a multivariate Boosted Decision Tree (BDT) classifier.
+
+The paper is organised as follows. We first describe the Monte Carlo event generation procedure for the SM and EFT benchmarks in section~\ref{sec:gen}. Section~\ref{sec:tools} first describes the fiducial selection employed, the training and analysis implemented using the BDT classifier and the STXS binning used for ZH. In Section~\ref{sec:test}, we summarise the results of the selections and binnings and perform a statistical hypothesis test to quantify the relative strengths of the two methods before concluding and laying out the avenues for further investigation in Section~\ref{sec:conclusions}
 
 \section{Generated Models} 
-\label{sec:SSSS}
+\label{sec:gen}
 %Ken
-%\input{geninput.tex}
+\input{geninput.tex}
 
 \section{Analysis}
 \label{sec:tools}
-%\input{ana.tex}
+\input{ana.tex}
 %  
 
 
@@ -91,18 +104,19 @@ $^4$ }
 \label{sec:test}
 
 %All!
-%\input{analysis.tex}
+\input{stats.tex}
 
 
 \section{Conclusions}
 \label{sec:conclusions}
+\input{conclusions.tex}
 
 
 
 \section*{Acknowledgments}
 
 We thank the organizers and conveners of the Les Houches workshop, ``Physics
-at TeV Colliders'', for a stimulating meeting. This work has received funding from the European Union's Horizon 2020 research and innovation programme / ERC Grant Agreement n. 715871.
+at TeV Colliders'', for a stimulating meeting. This work has received funding from the European Union's Horizon 2020 research and innovation programme / ERC Grant Agreement n. 715871. K. M. is supported in part by the Belgian Federal Science Policy Office through the Interuniversity Attraction Pole P7/37 and by the European Union’s Horizon 2020 research and innovation programme under the Marie Sk\l{}odowska-Curie grant agreement No. 707983.
 
 
 %\vfil\eject
