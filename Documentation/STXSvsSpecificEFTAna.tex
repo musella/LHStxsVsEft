@@ -55,12 +55,13 @@
 \title{
 %\vskip -15mm
 Simplified Template Cross Sections: sensitivity to dimension-6 interactions at LHC run 2}
-\author{Jorge~de~Blas$^1$,
-Kristin~Lohwasser$^2$, Pasquale~Musella$^3$ and Ken~Mimasu$^4$}
-\institute{$^1$XXX \\
-$^2$Department of Physics and Astronomy, Sheffield University, Sheffield, UK \\
-$^3$XXX\\
-$^4$Centre for Cosmology, Particle Physics and Phenomenology (CP3), Universit\'e
+\author{Jorge~de~Blas$^{1,2}$,
+Kristin~Lohwasser$^3$, Pasquale~Musella$^4$ and Ken~Mimasu$^5$}
+\institute{$^1$Dipartimento di Fisica e Astronomia ``Galileo Galilei'', Universit\`a di Padova,\\ Via Marzolo 8, I-35131 Padova, Italy\\
+$^2$INFN, Sezione di Padova, Via Marzolo 8, I-35131 Padova, Italy\\
+$^3$Department of Physics and Astronomy, Sheffield University, Sheffield, UK \\
+$^4$XXX\\
+$^5$Centre for Cosmology, Particle Physics and Phenomenology (CP3), Universit\'e
 catholique de Louvain, Chemin du Cyclotron, 2, B-1348 Louvain-la-Neuve, Belgium } 
 \maketitle
 
@@ -104,6 +105,61 @@ The paper is organised as follows. We first describe the Monte Carlo event gener
 \end{itemize}
 \input{ana.tex}
 %  
+
+\subsection{STXS binning}
+
+The generated samples for all signal benchmarks ($C_{HW}=???$) as well as the backgrounds (SM $pp \to ZH, H\to b\bar{b}$ and $pp\to Zb\bar{b}$) are categorized according to the STXS proposal for the $VH$ channel in Ref.~\cite{deFlorian:2016spz}. Within this framework, different regions of the phase space --referred to as ''bins'' for simplicity-- are defined, with the purpose of optimizing the sensitivity of the measurements while at the same time minimizing their dependence on theory assumptions. The different STXS bins are defined specifically for each Higgs production mode. For the process of interest
+for the present exercise ($pp \to ZH \to \ell^+ \ell^- b\bar{b}$) the different stages of the categorization and the resulting bins are summarized as follows (see \cite{deFlorian:2016spz} for details):
+%
+\begin{itemize}
+{\item  {\bf Stage 0:} Events with $\left|y_H\right| <2.5$ are selected.}
+%
+{\item {\bf Stage 1:} $ZH$ production is splitted into production via $q\bar{q}$ or $gg$ initial states. Our process sample was generated at LO and only contains $q\bar{q}\to ZH$ events. Events are subsequently classified according to the value of $p_T^Z$ and number of extra jets\footnote{JETS ARE DEFINED AS?} in the event as follows:
+%
+\vspace{0.25cm}
+%
+\begin{center}
+${\bf \underline{q\bar{q}\to ZH}}$
+\end{center}
+\begin{eqnarray}
+p_T^Z \in& [0,150]~\mathrm{GeV},& \nonumber\\
+%
+p_T^Z \in& [150,250]~\mathrm{GeV}&(0\mbox{-}\mathrm{j}),\\
+%
+p_T^Z \in& [150,250]~\mathrm{GeV}&(\geq 1\mbox{-}\mathrm{j}),\nonumber\\
+%
+p_T^Z >&250~\mathrm{GeV}.\nonumber&
+\end{eqnarray}
+}
+%
+%
+{\item {\bf Stage 2:} On this last stage the low $p_T^Z$ bins are further separated according to the number of extra jets, while the high-$p_T^Z$ region is split at 400 GeV. The final set of STXS bins that apply in our case are the following six:
+%
+\vspace{0.25cm}
+%
+\begin{center}
+${\bf \underline{q\bar{q}\to ZH}}$
+\end{center}
+\begin{eqnarray}
+p_T^Z \in& [0,150]~\mathrm{GeV}&(0\mbox{-}\mathrm{j}),\nonumber\\
+%
+p_T^Z \in& [0,150]~\mathrm{GeV}&(\geq 1\mbox{-}\mathrm{j}),\nonumber\nonumber\\
+%
+p_T^Z \in& [150,250]~\mathrm{GeV}&(0\mbox{-}\mathrm{j}),\\
+%
+p_T^Z \in& [150,250]~\mathrm{GeV}&(\geq 1\mbox{-}\mathrm{j}),\nonumber\\
+%
+p_T^Z \in& [250,400]~\mathrm{GeV},&\nonumber\\
+%
+p_T^Z >&400~\mathrm{GeV}.\nonumber&
+\end{eqnarray}
+}
+\end{itemize}
+%
+{[\bf EXPLAIN THE USE OF THE BDT VARIABLE TO REJECT BACKGR AFTER THE BDT SECTION IS DONE]}
+{[\bf Figs: $S^2/B$ for the different benchmarks. Define S as new physics only?} 
+
+
 
 
 \section{Statistical Hypothesis testing}
