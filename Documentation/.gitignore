@@ -1,0 +1,8 @@
+*.bbl
+*.synctex.gz
+*.fls
+*.aux
+*.fdb_latexmk
+*.blg
+*.lb
+*.pdf
