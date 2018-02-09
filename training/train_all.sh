@@ -12,9 +12,12 @@
 
 output=opt
 
-./train.py --train-file ZH/train_bsm1.hd5  --out-dir ${output}_bsm1 --save-pickle 2>&1 | tee ${output}_bsm1.log &
-./train.py --train-file ZH/train_bsm2.hd5  --out-dir ${output}_bsm2 --save-pickle 2>&1 | tee ${output}_bsm2.log &
-./train.py --train-file ZH/train_sm.hd5    --out-dir ${output}_sm   --save-pickle 2>&1 | tee ${output}_sm.log   &
+## ./train.py --train-file ZH/train_bsm1.hd5  --out-dir ${output}_bsm1 --save-pickle 2>&1 | tee ${output}_bsm1.log &
+## ./train.py --train-file ZH/train_bsm2.hd5  --out-dir ${output}_bsm2 --save-pickle 2>&1 | tee ${output}_bsm2.log &
+## ./train.py --train-file ZH/train_sm.hd5    --out-dir ${output}_sm   --save-pickle 2>&1 | tee ${output}_sm.log   &
+
+./train.py --train-file ZH/train_bsm3.hd5  --out-dir ${output}_bsm3 --save-pickle 2>&1 | tee ${output}_bsm3.log &
+./train.py --train-file ZH/train_bsm4.hd5  --out-dir ${output}_bsm4 --save-pickle 2>&1 | tee ${output}_bsm4.log &
 
 wait
 
