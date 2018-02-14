@@ -8,7 +8,9 @@ the likelihood for each event to belong to any of the three classes.
 \begin{equation}
 p_{i}(\vec x) = \frac{ e^{\beta_{i}(\vec x) } }{ \sum_j e^{\beta_{j}(\vec x) } }
 \end{equation}
-here $\vec x$ represents all the input variables to the discriminant, that are shown in Table~\ref{tab:bdt_features} \red{(Definition of $\beta_i$)}.
+here $\vec x$ represents all the input variables to the discriminant, that are shown in
+Table~\ref{tab:bdt_features} and $\beta_{i}(\vec x)$ are non-linear functions of these
+variables.
 
 These kind of algorithms are regularly used by the experimental analyses and often provide a comparable performance to those of more sophisticated techniques such as matrix element methods. 
 %
@@ -34,7 +36,7 @@ Input variables used by the kinematic BDT discriminants.
 Five sets of discriminants were trained:
 \begin{enumerate}
 \item A binary discriminant to separate $Z b\bar{b}$ production from the SM $Z H$ production.
-\item Four sets of \red{three(/multi?)-class} discriminants (one for each of the $c_{\sss HW}$ benchmarks) to
+\item Four sets of three-class discriminants (one for each of the $c_{\sss HW}$ benchmarks) to
     discriminate between $Z b\bar{b}$, SM $Z H$ and BSM $Z H$ production.
 \end{enumerate}
 The first discriminant was used to reduce the $Z b\bar{b}$ background in the template
@@ -86,14 +88,13 @@ similar results were obtained in all cases.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{plots/bkg_cut_opt.png}
+\includegraphics[width=0.8\textwidth]{plots/bkg_cut_opt.pdf}
 \caption{
 \label{fig:s2_over_b}
 Optimisation analysis to determine the maximum value of $p(Z b\bar{b})$ for events
 considered in the analysis. (left) {\it ROC} curve for $Z b\bar{b}$ vs SM $Z H$
 separation. (right) Regularised $\varepsilon^2(SM Z H) /
 \varepsilon(Zb\bar{b})$ as a function of the $p(Z b\bar{b})_{max}$.
-\red{the plots are a bit pixellated, are there PDF versions available?}
 }
 \end{figure}
 
@@ -103,56 +104,74 @@ discriminants. While the design of an optimal discriminant that continuously dep
 the BSM parameters is beyond the scope of this work, we investigated the degree of
 correlation between the BSM discriminants for each of the scenarios.
 Figure~\ref{fig:bdt_corr} shows the linear correlation coefficient between $p(BSM)$ for
-each of the four scenarios, evaluated on SM $Z H$ production events \red{(can we add one sentence to qualitatively describe what this measures?)}. As it can be seen,
+each of the four scenarios, evaluated on SM $Z H$ production events. The $p(BSM)$
+BDT outputs estimate the likelihood for an event to come from each of the considered BSM
+scenarios.
+As it can be seen,
 the linear correlation varies between 0.3 and 0.96, and it increases as the distance
 between the benchmark points decreases. This suggests that the information used to
 discriminate the different benchmarks is similar, but that optimal results are obtained
 when a specific benchmark is targeted.
 
-\red{everything below, inlcuding table, overlaps with the stats analysis sections -- need to decide where to put it}
-Finally, we compare the selection efficiency of selecting events according to the $p(Z
-b\bar{b})$ discriminant trained to separate $Z b\bar{b}$ production from the SM $Z H$
-production. \red{QUESTION: What are the BDT cuts used?} A difference in these figures would directly affect any analysis based on STXS that are extrapolated to a larger phase space assuming SM $Z
-H$ kinematics. As can be seen in Table~\ref{tab:bdt_efficiency}, relative differences in efficiencies of the order of 20-50\% are observed. \red{In general, the sensitivity to any non-SM contribution to a measured cross section can only come from the events recorded in the fiducial volume, prior to any model-dependent extrapolations.}
+%% \red{everything below, inlcuding table, overlaps with the stats analysis sections -- need
+%%   to decide where to put it} 
+%% Finally, we compare the selection efficiency of selecting events according to the $p(Z
+%% b\bar{b})$ discriminant trained to separate $Z b\bar{b}$ production from the SM $Z H$
+%% production. \red{QUESTION: What are the BDT cuts used?} A difference in these figures
+%% would directly affect any analysis based on STXS that are extrapolated to a larger phase
+%% space assuming SM $Z 
+%% H$ kinematics. As can be seen in Table~\ref{tab:bdt_efficiency}, relative differences in
+%% efficiencies of the order of 20-50\% are observed. \red{In general, the sensitivity to any
+%%   non-SM contribution to a measured cross section can only come from the events recorded
+%%   in the fiducial volume, prior to any model-dependent extrapolations.} 
 %
 % \blindtext
 
-\newfloatcommand{capbtabbox}{table}[][\FBwidth]
 \begin{figure}[h!]
-\begin{floatrow}
-\ffigbox{%
-\includegraphics[width=0.8\linewidth]{plots/bdt_corr.png}
-}{%
-  \caption{\label{fig:bdt_corr}A figure
+\includegraphics[width=0.35\linewidth]{plots/bdt_corr.png}
+\caption{\label{fig:bdt_corr}A figure
   Linear correlation coefficient between $p(BSM)$ for
   each of the four scenarios, evaluated on SM $Z H$ production events.
   Row and columns are labelled by the value of $c_{\sss HW}$.
-  }%
 }
-\hspace{1cm}
-\capbtabbox{%
-\hspace{1cm}
-\begin{tabular}{||c|c||}
-sample & $\varepsilon$  \\
-\hline
-$c_{\sss HW} = 0.03$ & 0.14 \\
-$c_{\sss HW} = 0.01$ & 0.16 \\
-SM & 0.19 \\
-$c_{\sss HW} = -0.01$ & 0.23 \\
-$c_{\sss HW} = -0.03$ & 0.32 \\
-\end{tabular}
-\hspace{1cm}
-\vspace{1.2cm}
-}{%
-  \caption{
-  \label{tab:bdt_efficiency}
-  Selection efficiency for the $p(Z b\bar{b})$ selection for different scenarios. The
-  efficiency is computed for events in the fiducial volume defined in Table~\ref{tab:FiducialXS}.
-  \red{can we add the efficiency for Zbb to show how well it rejects and also use the number later in the text?}
-  }%
-}
-\end{floatrow}
 \end{figure}
+
+%%% \newfloatcommand{capbtabbox}{table}[][\FBwidth]
+%%% \begin{figure}[h!]
+%%% \begin{floatrow}
+%%% \ffigbox{%
+%%% \includegraphics[width=0.8\linewidth]{plots/bdt_corr.png}
+%%% }{%
+%%%   \caption{\label{fig:bdt_corr}A figure
+%%%   Linear correlation coefficient between $p(BSM)$ for
+%%%   each of the four scenarios, evaluated on SM $Z H$ production events.
+%%%   Row and columns are labelled by the value of $c_{\sss HW}$.
+%%%   }%
+%%% }
+%%% \hspace{1cm}
+%%% \capbtabbox{%
+%%% \hspace{1cm}
+%%% \begin{tabular}{||c|c||}
+%%% sample & $\varepsilon$  \\
+%%% \hline
+%%% $c_{\sss HW} = 0.03$ & 0.14 \\
+%%% $c_{\sss HW} = 0.01$ & 0.16 \\
+%%% SM & 0.19 \\
+%%% $c_{\sss HW} = -0.01$ & 0.23 \\
+%%% $c_{\sss HW} = -0.03$ & 0.32 \\
+%%% \end{tabular}
+%%% \hspace{1cm}
+%%% \vspace{1.2cm}
+%%% }{%
+%%%   \caption{
+%%%   \label{tab:bdt_efficiency}
+%%%   Selection efficiency for the $p(Z b\bar{b})$ selection for different scenarios. The
+%%%   efficiency is computed for events in the fiducial volume defined in Table~\ref{tab:FiducialXS}.
+%%%   \red{can we add the efficiency for Zbb to show how well it rejects and also use the number later in the text?}
+%%%   }%
+%%% }
+%%% \end{floatrow}
+%%% \end{figure}
 
 % \end{document}
 % \begin{figure}[h!]
