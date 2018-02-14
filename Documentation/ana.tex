@@ -1,8 +1,9 @@
 %!TEX root = /Users/Ken/Work/Projects/LesHouches2017/STXSvsEFT/repo/LHStxsVsEft/Documentation/STXSvsSpecificEFTAna.tex
 To begin the analysis on a realistic level, we first perform a simple fiducial selection on the event samples, to emulate a typical LHC selection that would be performed for the ZH process. To this end, we also implement a $p_T$ and $|\eta|$ dependent smearing function on the $b$-jet momenta to approximate finite detector resolution effects following the parametrised functions determined by the CMS particle-flow performance analysis~\cite{Sirunyan:2017ulk}.
 
-Events are required to have two leptons satisfying $p_T > 25$ GeV and $|\eta|< 2.5$. Exactly two $b$-jets, as identified using truth-level information by {\sc MadAnalysis5}, are required satisfying $p_T > 20$ GeV and $|\eta|< 2.5$. We assume a flat $b$-tagging efficiency of $70\%$, corresponding to the DeepCSV medium working point defined in~\cite{Sirunyan:2017ezt}. Additionally, $Z$- and Higgs-boson mass windows are imposed on the invariant masses of the lepton and $b$-jet pairs such that $75 < M_{\ell\ell} < 105$ GeV and  $60 < M_{\ell\ell} < 140$ GeV. This defines our fiducial volume on which both the BDT training and STXS binning will be performed. Table~\ref{tab:FiducialXS} summarises the cross sections obtained after the fiducial selection for the Monte Carlo samples generated. The $H\to b\bar{b}$ branching fraction is computed in the SM and the SMEFT benchmark points using the e{\sc HDECAY}~\cite{Contino:2014aaa} interface of {\sc Rosetta}~\cite{Falkowski:2015wza} and folded into the cross section results.
-\begin{table}
+Jets are clustered with the anti-$k_T$ algorithm with a radius parameter of 0.4 and required to have $p_T > 20$ GeV. Events are required to have two leptons satisfying $p_T > 25$ GeV and $|\eta|< 2.5$. Exactly two $b$-jets, as identified using truth-level information by {\sc MadAnalysis5}, are required satisfying $p_T > 20$ GeV and $|\eta|< 2.5$. We assume a flat $b$-tagging efficiency of $70\%$, corresponding to the DeepCSV medium working point defined in~\cite{Sirunyan:2017ezt}. Additionally, $Z$- and Higgs-boson mass windows are imposed on the invariant masses of the lepton and $b$-jet pairs such that $75 < M_{\ell\ell} < 105$ GeV and  $60 < M_{\ell\ell} < 140$ GeV. This defines our fiducial volume on which both the BDT training and STXS binning will be performed. Table~\ref{tab:FiducialXS} summarises the cross sections obtained after the fiducial selection for the Monte Carlo samples generated. The $H\to b\bar{b}$ branching fraction is computed in the SM and the SMEFT benchmark points using the e{\sc HDECAY}~\cite{Contino:2014aaa} interface of {\sc Rosetta}~\cite{Falkowski:2015wza} and folded into the cross section results.
+%
+\begin{table}[h!]
     \centering
     \begin{tabular}{|l|l|}
         \hline
@@ -20,7 +21,7 @@ Events are required to have two leptons satisfying $p_T > 25$ GeV and $|\eta|< 2
 \end{table}
 Clearly, the $Z b\bar{b}$ background is overwhelmingly large even after the Higgs mass
 window selection. A realistic analysis will employ multivariate analyses techniques to
-reduce this background. As explained below, we mimic this aspect of the
+reduce this background. As explained in the next section, we mimic this aspect of the
 experimental analyses by training a BDT discriminant to optimally reject this background
 in favour of the SM $ZH$ process.
 
