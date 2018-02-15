@@ -1,25 +1,26 @@
 %!TEX root = /Users/Ken/Work/Projects/LesHouches2017/STXSvsEFT/repo/LHStxsVsEft/Documentation/STXSvsSpecificEFTAna.tex
-The production of a Higgs boson in association with an EW gauge boson can be considered one of the canonical LHC processes sensitive to SMEFT effects. Evidence for this process involving the $b\bar{b}$ decay mode of the Higgs and leptonic vector boson decays was finally observed in 2017~\cite{Aaboud:2017xsd,Sirunyan:2017elk}. Operators which modify the Higgs coupling to these gauge bosons, introducing momentum dependent interactions modify the production rate, especially enhancing it in the high energy regime. The associate production process can naturally access this region of phase space since the Higgs is produced recoiling against the associated vector, meaning that the $p_T$ of the Higgs or vector boson are a faithful proxy for the energy flowing through the EFT vertex. Of the many dimension-6 operators that can contribute to this process, we consider 
+The production of a Higgs boson in association with an EW gauge boson can be considered one of the canonical LHC processes sensitive to SMEFT effects. Evidence for this process involving the $b\bar{b}$ decay mode of the Higgs and leptonic vector boson decays was finally observed in 2017~\cite{Aaboud:2017xsd,Sirunyan:2017elk}. Some of the operators which modify the Higgs coupling to these gauge bosons introduce $E^2/\Lambda^2$ effects in the production rate, enhancing it at high energies.
+The associated production process can naturally access this region of phase space since the Higgs is produced recoiling against the associated vector, meaning that the $p_T$ of the Higgs or vector boson are a faithful proxy for the energy flowing through the EFT vertex. Of the many dimension-6 operators that can contribute to this process, we consider 
 \begin{align}
     \mathcal{O}_{\sss HW} &= 
-    \frac{ig}{\Lambda^2} \big[D_\mu \phi^\dag T_{2k} D_\nu \phi\big] 
+    \frac{ig}{2\Lambda^2} \big[D_\mu \phi^\dag \sigma_{k} D_\nu \phi\big] 
     W^{k,\mu \nu},
 \end{align}
-an operator from the so called strongly interacting light Higgs (SILH) basis~\cite{Giudice:2007fh,Contino:2013kra}. Here, $T_{2k}$ refers to the generators of $SU(2)_L$ normalised such that $\{T_{2i},T_{2j}\}=\delta_{ij}/2$ and the covariant derivative, $D_\mu$, for the Higgs field is defined as
+an operator from the so called strongly interacting light Higgs (SILH) basis~\cite{Giudice:2007fh,Contino:2013kra}. Here, $\sigma_{k}$ refers to the Pauli matrices and the covariant derivative, $D_\mu$, for the Higgs field is defined as
 \begin{align}
-    D_\mu\phi &= \partial_\mu \phi -  i g T_{2k} W_\mu^k \phi - \frac12 i g' B_\mu \phi,
+    D_\mu\phi &= \partial_\mu \phi -  i g \frac{\sigma_{k}}{2} W_\mu^k \phi - \frac12 i g' B_\mu \phi,
 \end{align}
 with $g$ and $g^\prime$ the weak and hypercharge gauge couplings respectively.
 
-A global fit~\cite{Ellis:2014jta} combining information from precision measurements at LEP and LHC Run 1 data constrains the Wilson coefficient to lie in the range 
+A global fit~\cite{Ellis:2014jta} combining information from precision measurements at LEP and LHC Run 1 data constrains the Wilson coefficient, $c_{\sss HW}$, to lie in the range 
 \begin{align}
     \frac{m_{\sss W}^2}{\Lambda^2}c_{\sss HW} = [-0.07,\,0.03].
 \end{align}
-A sensitivity estimate for LHC run 2 was also performed in~\cite{Degrande:2016dqg} by projecting an 8 TeV ZH analysis~\cite{TheATLAScollaboration:2013lia} to 13 TeV, a single overflow bin of the $Z$ $p_T$ distribution, indicating that an order of magnitude improvement could be made even with this limited information. This indicates that the STXS measurements are likely to provide even greater sensitivity to this parameter.
+A sensitivity estimate for LHC Run 2 was also performed in~\cite{Degrande:2016dqg} by projecting an 8 TeV ZH analysis~\cite{TheATLAScollaboration:2013lia} to 13 TeV. The results of the study indicated that the previous bound could be improved by an order of magnitude. This indicates that the STXS measurements are likely to provide even greater sensitivity to this parameter.
 
 Motivated by the limits from the global fit, we select the following benchmark values for $c_{\sss HW}$:
 \begin{align}
-    c_{\sss HW} = \pm 0.03 \text{ and } \pm0.01\,,
+    C_{\sss HW} = \pm 0.03 \text{ and } \pm0.01\,,
 \end{align}
-setting, for simplicity, $\Lambda^2=m_{\sss W}^2$. The first value roughly saturates the positive end of the limit, and has been shown to yield drastic effects in the kinematic tails of distributions~\cite{Degrande:2016dqg}. The second corresponds to a smaller, yet potentially accessible value of the parameter that may better test the relative discriminating power of relatively small effects between the two methods we investigate. We simulate our Monte Carlo samples at leading order using {\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca} with the public {\sc HELatNLO}~\cite{Degrande:2016dqg,Alloul:2013naa} {\sc FeynRules}~\cite{Alloul:2013bka} model, exploiting reweighting methods to simulate multiple parameter space points (including the SM) simultaneously. We also include the dominant irreducible background contribution from $Z + b\bar{b}$ production with the $Z$-boson decaying leptonically. Showering and hadronisation, as well as the Higgs boson decay to $b\bar{b}$ are performed with {\sc PYTHIA8}~\cite{pythia8} and the events are reconstructed from hadron level with {\sc MadAnalysis5}~\cite{Conte:2012fm} which makes use of {\sc FastJet}~\cite{Cacciari:2011ma}.
+with $ C_{\sss HW}\equiv c_{\sss HW} m_{\sss W}^2/\Lambda^2$. The first value roughly saturates the positive end of the limit, and has been shown to yield drastic effects in the kinematic tails of distributions~\cite{Degrande:2016dqg}. The second corresponds to a smaller, yet potentially accessible value of the parameter that may better test the relative discriminating power of relatively small effects between the two methods we investigate. We simulate our Monte Carlo samples at leading order using {\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca} with the public {\sc HELatNLO}~\cite{Degrande:2016dqg,Alloul:2013naa} {\sc FeynRules}~\cite{Alloul:2013bka} model, exploiting reweighting methods to simulate multiple parameter space points (including the SM) simultaneously. We also include the dominant irreducible background contribution from $Z b\bar{b}$ production with the $Z$-boson decaying leptonically. Showering and hadronisation, as well as the Higgs boson decay to $b\bar{b}$ are performed with {\sc PYTHIA8}~\cite{pythia8} and the events are reconstructed from hadron level with {\sc MadAnalysis5}~\cite{Conte:2012fm} which makes use of {\sc FastJet}~\cite{Cacciari:2011ma}.
 

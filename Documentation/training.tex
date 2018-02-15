@@ -1,23 +1,25 @@
 %!TEX root = /Users/Ken/Work/Projects/LesHouches2017/STXSvsEFT/repo/LHStxsVsEft/Documentation/STXSvsSpecificEFTAna.tex
 We build a set of gradient BDT classifiers to efficiently discriminate
-between the different event hypotheses involved in the analysis, namely $Z b\bar{b}$,
+between the different classes of event hypotheses involved in the analysis, namely $Z b\bar{b}$,
 SM $Z H$, and BSM $Z H$ production. 
 The classifiers receive kinematic variables related to the event as inputs and approximate
-the likelihood for each event to belong to any of the three classes.
-
+the likelihood for each event to belong to any of the three classes. The likelihoods are parameterised as
+%
 \begin{equation}
-p_{i}(\vec x) = \frac{ e^{\beta_{i}(\vec x) } }{ \sum_j e^{\beta_{j}(\vec x) } }
+p_{i}(\vec x) = \frac{ e^{\beta_{i}(\vec x) } }{ \sum_j e^{\beta_{j}(\vec x) } },
 \end{equation}
-here $\vec x$ represents all the input variables to the discriminant, that are shown in
-Table~\ref{tab:bdt_features} and $\beta_{i}(\vec x)$ are non-linear functions of these
+%
+where $\vec x$ represents all the input variables to the discriminant, that are shown in
+Table~\ref{tab:bdt_features}, and $\beta_{i}(\vec x)$ are non-linear functions of these
 variables.
 
 These kind of algorithms are regularly used by the experimental analyses and often provide a comparable performance to those of more sophisticated techniques such as matrix element methods. 
 %
 \begin{table}[h!]
 \centering
-\begin{tabular}{||c|c||c|c||}
-variable definition & variable name &  variable name & variable definition \\
+\begin{tabular}{|c|c|c|c|}
+\hline
+Variable definition & Variable name &  Variable name & Variable definition \\
 \hline
 $p_T(l_1)$ & leading lepton $p_T$ & $p_T(l_2)$ & sub-leading lepton $p_T$\\
 $p_T(b_1)$ & leading b-jet $p_T$ & $p_T(b_2)$ & sub-leading b-jet $p_T$\\
@@ -25,7 +27,8 @@ $\eta(l_1)$ & leading lepton pseudo-rapidity & $\eta(l_2)$ & sub-leading lepton 
 $\eta(b_1)$ & leading b-jet pseudo-rapidity  & $\eta(b_2)$ & sub-leading b-jet  pseudo-rapidity\\
 $y(Z)$ & Z-candidate rapidity  & $y(H)$ & H-candidate rapidity \\
 $p_T(Z)$ & Z-candidate $p_T$  & $m_{bb}$ & H-candidate invariant mass \\
-$m_{VH}$ & HZ invariant mass  &  &  \\
+$m_{ZH}$ & HZ invariant mass  &  &  \\
+\hline
 \end{tabular}
 \caption{
 \label{tab:bdt_features}
@@ -53,14 +56,16 @@ The optimized hyperparameters are shown in Table~\ref{tab:bdt_hpars}.
 
 \begin{table}
 \centering
-\begin{tabular}{||c|c||}
-parameter & value \\
+\begin{tabular}{|c|c|}
+\hline
+Parameter & Value \\
 \hline
 number of trees & 600 \\
 maximum depth & 5 \\
 bagging fraction & 0.8 \\
 learning rate & 0.05 \\
 $L_2$ regularisation strength & 1 \\
+\hline
 \end{tabular}
 \caption{
 \label{tab:bdt_hpars}
@@ -68,11 +73,11 @@ Optimized BDT training hyperparameters.
 }
 \end{table}
 
-After training, the $p(Z b\bar{b})$ variables were used to define selection criteria
+After training, the $p(Z b\bar{b})$ ($\equiv p_{Z b\bar{b}}(\vec x)$) variables were used to define selection criteria
 for the events to be considered for analysis. The maximum allowed value for $p(Z b\bar{b})$
 was determined in order to maximise the quantity $\varepsilon^2(SM Z H) / \varepsilon(Z
 b\bar{b})$, where $\varepsilon$ is the selection efficiency of a given sample. Such a
-figure of merit is, in the gaussian limit, proportional to the squared median expected
+figure of merit is, in the Gaussian limit, proportional to the squared median expected
 discovery significance to observe the standard model production of of $Z H$.
 The choice was made again to mimic the experimental analyses, for which the observation of
 the SM Higgs signal will be the primary goal.
@@ -88,7 +93,7 @@ similar results were obtained in all cases.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{plots/bkg_cut_opt.pdf}
+\includegraphics[width=\textwidth]{plots/bkg_cut_opt.pdf}
 \caption{
 \label{fig:s2_over_b}
 Optimisation analysis to determine the maximum value of $p(Z b\bar{b})$ for events
