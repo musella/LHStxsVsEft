@@ -60,7 +60,7 @@
 \begin{document}
 \title{
 %\vskip -15mm
-Simplified Template Cross Sections: sensitivity to dimension-6 interactions at LHC run 2}
+Simplified Template Cross Sections: sensitivity to dimension-6 interactions at the LHC}
 \author{Jorge~de~Blas$^{1,2}$,
 Kristin~Lohwasser$^3$, Pasquale~Musella$^4$ and Ken~Mimasu$^5$}
 \institute{$^1$Dipartimento di Fisica e Astronomia ``Galileo Galilei'', Universit\`a di Padova,\\ Via Marzolo 8, I-35131 Padova, Italy\\
@@ -72,7 +72,7 @@ catholique de Louvain, Chemin du Cyclotron, 2, B-1348 Louvain-la-Neuve, Belgium 
 \maketitle
 
 \begin{abstract}
-We perform a sensitivity study of the simplified template cross section (STXS) measurements to dimension-6 interactions within the Standard Model Effective Field Theory framework. We focus on energy dependent effects in Higgs production in association with a $Z$-boson, $p p \to Z H \to \ell^+\ell^- b\bar{b}$. Several benchmark points are considered, with different values of a representative Wilson coefficient, alongside the Standard Model prediction as well as the dominant $Zb\bar{b}$ background. We contrast the expected sensitivity obtained by the STXS to an analysis exploiting multivariate techniques via a boosted decision tree classifier. The aim of this exercise is to estimate the amount information retained in the STXS binning, and therefore the power of the framework for model-independent hypothesis testing in Higgs physics. We observe that the final performance of the BDT analysis does not differ significantly from the differential information in $Z$-boson $p_T$ offered by the STXS with one notable exception, that would suggest  that once the sensitivity of the STXS measurements is saturated, moving towards optimised multivariate methods remains well-motivated. 
+We perform a sensitivity study of the simplified template cross section (STXS) measurements to dimension-6 interactions within the Standard Model Effective Field Theory framework. We focus on energy dependent effects in Higgs production in association with a $Z$-boson, $p p \to Z H \to \ell^+\ell^- b\bar{b}$. Several benchmark points are considered, with different values of a representative Wilson coefficient, alongside the Standard Model prediction as well as the dominant $Zb\bar{b}$ background. We contrast the expected sensitivity obtained by the STXS to an analysis exploiting multivariate techniques via a boosted decision tree classifier. The aim of this exercise is to estimate the amount information retained in the STXS binning, and therefore the power of the framework for model-independent hypothesis testing in Higgs physics. We observe that the final performance of the BDT analysis does not differ significantly from the differential information in $Z$-boson $p_T$ offered by the STXS, with one notable exception. This would suggest that, once the sensitivity of the STXS measurements is saturated, moving towards optimised multivariate methods remains well-motivated. 
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,10 +83,12 @@ We perform a sensitivity study of the simplified template cross section (STXS) m
 \section{Introduction}
 \label{sec:intro}
 % All
-The Standard Model Effective Field Theory (SMEFT) is, by now, a well established framework for parametrising new physics effects in the interactions of Standard Model (SM) particles in a model independent way. It has been and continues to be a key part of the LHC programme, complementary to direct searches for new physics. The framework employs an operator expansion in canonical dimension suppressed by a generic cutoff scale, $\Lambda$, assumed to be much larger than the electroweak (EW) scale. The leading new physics contributions supplement the SM Lagrangian with dimension 6 operators\footnote{There is also one dimension-5 operator, the Weinberg operator, which generates neutrino masses.}, 
+The Standard Model Effective Field Theory (SMEFT) is, by now, a well established framework for parametrising new physics effects in the interactions of Standard Model (SM) particles in a model independent way. It has been and continues to be a key part of the LHC programme, complementary to direct searches for new physics. The framework employs an operator expansion in canonical dimension suppressed by a generic cutoff scale, $\Lambda$, assumed to be much larger than the electroweak (EW) scale. The leading new physics contributions supplement the SM Lagrangian with dimension 6 operators\footnote{There is also one dimension-5 operator, the Weinberg operator, which generates neutrino masses.},
+\vspace{-0.05cm}
 \begin{align}
-    \mathcal{L}=\mathcal{L}_{SM}+\sum_i \frac{c_i}{\Lambda^2}\mathcal{O}^i_{D=6}+\cdots.
+    \mathcal{L}=\mathcal{L}_{SM}+\sum_i \frac{C_i}{\Lambda^2}\mathcal{O}^i_{D=6}+\cdots.
 \end{align} 
+\vspace{-0.05cm}
 New physics effects are then always suppressed by $q^2/\Lambda^2$, where $q<\Lambda$ is a given mass scale, e.g. $q=v$ the Higgs vacuum expectation value, or $q=E$ the typical energy scale of a physical process.
 
 One of the main strengths of the LHC in this respect is its ability to probe the high energy regime, 
